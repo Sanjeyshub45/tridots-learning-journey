@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+        <h1>Hello World</h1>
+    <h3>Name:</h3>
+    <input type="text" />
+    <h3 >Age:</h3>
+    <input type="number" />
+    <h3>Gender:</h3>
+    <p>Male:</p>
+    <input type="radio" name="gender" id="" />
+    <p>Female:</p>
+    <input type="radio" name="gender" id="" />
+    <button type="reset">Reset</button>
+    <button type="button" onclick="submitMessage()" id="submitReset">Submit</button>
+  
+  </body>
+    </form>
+    
+  <script>
+    function submitMessage() {
+      alert("Submitted Successfully");
+      document.getElementById("form").reset();
+    }
+  </script>
+</html>
