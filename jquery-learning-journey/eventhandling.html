@@ -6,29 +6,28 @@
     <title>Event Handling</title>
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
   </head>
-  <body>
+  <body> 
     <button id="btn">Click Me</button>
     <div
       id="container"
-      style="width: 100px; height: 100px; background-color: aqua"
+      style="width: 100px; height: 100px; background-color: rgb(189, 236, 236)"
     ></div>
-    <input type="text" name="" id="in" placeholder="Focus">
+    <input type="text" name="" id="in" placeholder="Focus" />
     <script>
       //click
-        $("#btn").click(function () {
-          alert("Button Clicked");
-        });
+      $("#btn").click(function () {
+        alert("Button Clicked");
+      });
 
-        //hover
-        $('#container').hover(function() {
-            $(this).css("background-color","red")
-            
-        },function() {
-        $(this).css("background-color","aqua")
-        })
-
-
-
+      //hover
+      $("#container").hover(
+        function () {
+          $(this).css("background-color", "red");
+        },
+        function () {
+          $(this).css("background-color", "aqua");
+        },
+      );
     </script>
   </body>
 </html>
