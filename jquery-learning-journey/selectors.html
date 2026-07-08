@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+  </head>
+  <body>
+    <div id="unique">Content</div>
+    <div class="boxes">Content</div>
+    <div class="boxes">Content</div>
+
+    <p>Emptyyyyy</p>
+
+    <form action="">
+      <input type="text" id="" placeholder="Enter a Text" />
+      <input type="password" id="" placeholder="Enter a Password" />
+
+      <input type="text" name="username" id="" />
+      <input type="email" name="email" id="" />
+    </form>
+
+    <a href="https://example.com">Example com</a>
+    <a href="https://example.org">Example org</a>
+
+    <div id="container">
+      <p>Hello1</p>
+      <p>Hello2</p>
+    </div>
+
+    <div class="parent">
+      <p>Direct Child</p>
+      <div>
+        <p>Not a Direct Child</p>
+      </div>
+    </div>
+
+    <script>
+      //id selector:
+      $("#unique").text("Hello World...");
+
+      //class selector:
+      $(".boxes").css("background-color", "red");
+      $(".boxes").css("color", "white");
+
+      //element selector:
+      //   $("p").hide();
+
+      //attribute selector
+      $("[placeholder]").css("border", "2px solid red");
+
+      //value selector
+      $('[name="username"]').val("Sanjey");
+
+      //partial value selector:
+      $('a[href*="example"]').css("color", "red");
+      $('a[href^="https://example"]').css("color", "red");
+
+      //hierarchical/Descendant selectors
+      $("#container p").css("color", "blue");
+
+      //child selector
+      $('.parent > p').css("font-weight","bold")
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <label for="">Enter a Todo Item:</label>
+    <input type="text" name="" id="item" />
+    <button onclick="add()">Add</button>
+    <button onclick="reset()">Reset</button>
+    <ul id="list-container"></ul>
+
+    <script>
+      var listContainer = document.getElementById("list-container");
+      var listItem = document.getElementById("item");
+      
+      function add() {
+        if (listItem.value === "") {
+          alert("Enter valid Todo");
+          return;
+        }
+        var item = listItem.value;
+        listContainer.innerHTML +=
+          "<li>" +
+          item +
+          "<button onclick='del(event)'>Delete</button>" +
+          "</li>";
+        listItem.value = "";
+      }
+      function del(event) {
+        event.target.parentElement.remove();
+      }
+      function reset() {
+        listContainer.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

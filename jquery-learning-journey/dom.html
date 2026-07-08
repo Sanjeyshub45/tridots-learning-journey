@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM manipulation jquery</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .container {
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">Old HTML</div>
+    <img id="logo" src="logo.png" alt="logo" />
+    <input type="text" name="" id="input" />
+
+    <div id="parent">
+      <p>Center</p>
+      <p class="rm">remove</p>
+    </div>
+
+    <p id="p1">Highlight</p>
+
+    <div class="container">
+      <button id="btn">Click Me</button>
+    </div>
+
+    <div id="holder">
+      <div class="item">Item 1</div>
+      <div class="special">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+    </div>
+
+    <script>
+      //adding html
+      //   $(".content").html('<p>New HTML</p>');
+
+      //text()
+      $(".content").text("New HTML");
+
+      //ATTRIBUTE
+      $("#logo").attr("src", "new.png");
+      $("#logo").attr("alt", "new");
+
+      //value
+      $("#input").val("Nothing");
+
+      //append
+      $("#parent").append("<p>Down</p>");
+      //prepend
+      $("#parent").prepend("<p>Top</p>");
+      //remove
+      $("#parent .rm").remove();
+
+      //add class
+      $("#p1").addClass("highlight");
+      //rm class
+      $("#p1").removeClass("highlight");
+
+      //toggle class
+      $("#p1").toggleClass("highlight");
+
+      //parent
+      $("#btn").click(function () {
+        var parent = $(this).parent();
+        parent.toggleClass("highlight");
+      });
+
+      //siblings
+      $('.item').click(function() {
+        $(this).siblings().toggleClass("highlight")
+        $(this).siblings('.special').css("background-color","red")
+      })
+    </script>
+  </body>
+</html>

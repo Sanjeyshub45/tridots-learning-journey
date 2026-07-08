@@ -1,0 +1,35 @@
+<!-- //Document Object Model Manipulation:-- -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <label>Number 1 </label>
+    <input type="number" name="" id="num1" />
+    <label>Number 2 </label>
+    <input type="number" name="" id="num2" />
+    <button onclick="solution()">Add</button>
+    <h3 id="result"></h3>
+
+    <button onclick="randomValue()">Click to get Random</button>
+    <h1 id="random"></h1>
+    <script>
+      //targetting (selecting) element using their id or class or query or tag.
+
+      var num1 = document.getElementById("num1");
+      var num2 = document.getElementById("num2");
+      var result = document.getElementById("result");
+      function solution() {
+        result.textContent = Number(num1.value) + Number(num2.value);
+      }
+
+      var random = document.getElementById("random");
+      function randomValue() {
+        random.textContent = Math.floor(Math.random() * 10) + 1;
+      }
+    </script>
+  </body>
+</html>

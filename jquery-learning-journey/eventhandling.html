@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+  </head>
+  <body>
+    <button id="btn">Click Me</button>
+    <div
+      id="container"
+      style="width: 100px; height: 100px; background-color: aqua"
+    ></div>
+    <input type="text" name="" id="in" placeholder="Focus">
+    <script>
+      //click
+        $("#btn").click(function () {
+          alert("Button Clicked");
+        });
+
+        //hover
+        $('#container').hover(function() {
+            $(this).css("background-color","red")
+            
+        },function() {
+        $(this).css("background-color","aqua")
+        })
+
+
+
+    </script>
+  </body>
+</html>

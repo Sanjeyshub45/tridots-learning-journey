@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    
+    <label>Enter a Number:</label>
+    <input type="number" name="" id="number" />
+    <button onclick="validate()">Guess</button>
+    <h1 id="result">Result</h1>
+    <h3 id="userInput"></h3>
+    <h3 id="comInput"></h3>
+
+    <script>
+      var userInput = document.getElementById("userInput");
+      var comInput = document.getElementById("comInput");
+      var result = document.getElementById("result");
+
+      function validate() {
+        const number = Number(document.getElementById("number").value);
+        var comGuess = Math.floor(Math.random() * 10) + 1;
+        userInput.textContent = "Your Guess:" + number;
+        comInput.textContent = "Computer Guess:" + comGuess;
+        if (comGuess == number) {
+          result.textContent = "You Won!!!!";
+        } else {
+          result.textContent = "You Lost!!!!";
+        }
+      }
+    </script>
+  </body>
+</html>
