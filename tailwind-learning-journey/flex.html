@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex in Tailwind CSS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="flex flex-row">
+      <div class="bg-gray-300 m-2 p-2">Flex Row</div>
+      <div class="bg-gray-200 m-2 p-2">Flex Row</div>
+      <div class="bg-gray-300 m-2 p-2">Flex Row</div>
+    </div>
+
+    <div class="flex flex-col">
+      <div class="bg-gray-300 m-2 p-2">Flex Column</div>
+      <div class="bg-gray-200 m-2 p-2">Flex Column</div>
+      <div class="bg-gray-300 m-2 p-2">Flex Column</div>
+    </div>
+
+    <div class="flex flex-nowrap">
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex no WRAP</div>
+    </div>
+
+    <div class="flex flex-wrap">
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+      <div class="bg-gray-300 m-2 p-2">Flex WRAP</div>
+    </div>
+
+    <div class="flex flex-row justify-start">
+      <div class="bg-gray-300 m-2 p-2">Justify Start</div>
+      <div class="bg-gray-200 m-2 p-2">Justify Start</div>
+      <div class="bg-gray-300 m-2 p-2">Justify Start</div>
+    </div>
+
+    <div class="flex flex-row justify-center">
+      <div class="bg-gray-300 m-2 p-2">Justify Center</div>
+      <div class="bg-gray-200 m-2 p-2">Justify Center</div>
+      <div class="bg-gray-300 m-2 p-2">Justify Center</div>
+    </div>
+    <div class="flex flex-row justify-end">
+      <div class="bg-gray-300 m-2 p-2">Justify End</div>
+      <div class="bg-gray-200 m-2 p-2">Justify End</div>
+      <div class="bg-gray-300 m-2 p-2">Justify End</div>
+    </div>
+    <div class="flex flex-row justify-between">
+      <div class="bg-gray-300 m-2 p-2">Justify Between</div>
+      <div class="bg-gray-200 m-2 p-2">Justify Between</div>
+    </div>
+    <div class="flex flex-row justify-evenly">
+      <div class="bg-gray-300 m-2 p-2">Justify Evenly</div>
+      <div class="bg-gray-200 m-2 p-2">Justify Evenly</div>
+      <div class="bg-gray-200 m-2 p-2">Justify Evenly</div>
+    </div>
+    <div class="flex flex-row justify-around">
+      <div class="bg-gray-300 m-2 p-2">Justify Around</div>
+      <div class="bg-gray-200 m-2 p-2">Justify Around</div>
+      <div class="bg-gray-200 m-2 p-2">Justify Around</div>
+    </div>
+
+    <div class="flex gap-10">
+      <div class="bg-gray-300 m-2 p-2">Gap</div>
+      <div class="bg-gray-200 m-2 p-2">Gap</div>
+      <div class="bg-gray-200 m-2 p-2">Gap</div>
+    </div>
+
+    <div class="flex gap-6">
+      <div class="bg-gray-300 m-2 p-2 order-3">Actual 1</div>
+      <div class="bg-gray-200 m-2 p-2 order-1">Actual 2</div>
+      <div class="bg-gray-200 m-2 p-2 order-2">Actual 3</div>
+    </div>
+
+    <div class="flex justify-center bg-black">
+      <nav class="flex">
+        <div class="m-2 p-2 bg-white">Home</div>
+        <div class="m-2 p-2 bg-white">Products</div>
+        <div class="m-2 p-2 bg-white">Services</div>
+        <div class="m-2 p-2 bg-white">Contact</div>
+      </nav>
+    </div>
+  </body>
+</html>
